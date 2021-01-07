@@ -12,4 +12,14 @@ constructor(name: string, type: string, launchDate: string, orbitType: string, o
     this.orbitType=orbitType;
     this.operational=operational;
 }
+shouldShowWarning ():boolean {
+    let satelliteType :string= this.type;
+     let newSatelliteType:string = satelliteType.toLowerCase();
+    
+    if (newSatelliteType === 'space debris'){
+        return true;
+    }else {
+        return false;
+    }
+}
 }
